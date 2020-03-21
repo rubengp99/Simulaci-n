@@ -1,0 +1,632 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+html, body,iframe{
+	margin: 0;
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	scrollbar-width: none;
+	background: #212121;
+	border:none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.top{
+	position: absolute;
+	top: -25vw;
+}
+
+.bottom{
+	position: absolute;
+	bottom: -23vw;
+}
+
+.left{
+	position: absolute;
+	left: -4vw;
+}
+
+.right{
+	position: absolute;
+	right: -4vw;
+}
+
+.y-center{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.x-center{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.block{
+	z-index: 0;
+	display: block;
+	width: 40vw; 
+	height: 40vw;
+	overflow: hidden;
+	background: #616161 ;
+	border-radius: 10%;
+	border: 3px #fff solid;
+	background-image: url(../images/sidewalk.jpg);
+	background-repeat: repeat;
+	background-size: 5vw 5vw;
+}
+
+.grass{
+	z-index: 1;
+	background-image: url(../images/grass.jpg);
+	display: block;
+	background-size: 40%;
+	background-repeat: repeat;
+	width: 37.5vw;
+	height: 37.5vw;
+	border-radius: 0%;
+	border: 3px #fff solid;
+}
+
+
+.top-right{
+	position: absolute;
+	top: -4vh;
+	right: -3vw;
+}
+
+.top-left{
+	position: absolute;
+	top: -4vh;
+	left: -3vw; 
+}
+
+.bottom-right{
+	position: absolute;
+	bottom: -4vh;
+	right: -3vw;
+}
+
+.bottom-left{
+	position: absolute;
+	left: -3vw;
+	bottom: -4vh;
+}
+
+.grass.top-right{
+	transform: scaleY(-1);
+}
+
+
+.grass.top-left{
+	transform: scale(-1);
+}
+
+.grass.bottom-right{
+	transform: scaleX(-1);
+}
+
+.road-x{
+	position: absolute;
+	background: #212121;
+	width: 100vw;
+	height: calc(100vh - (33vh * 2));
+	top: 33vh;
+	left: 0;
+}
+
+.road-y{
+	position: absolute;
+	background: #212121;
+	width: calc(100vw - (38vw * 2));
+	height: 100vh;
+	top: 0;
+	left: 38vw;
+}
+
+.f-base{
+	z-index: 1;
+	background: #212121;
+	width: calc(13vw + 8px);
+	height: calc(13vw + 8px);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+	background-image: url(../images/sidewalk.jpg);
+	background-size: 5vw 5vw;
+	background-repeat: repeat;
+	background-clip: content-box, border-box;
+}
+
+.f-base > .fountain{
+	z-index: 1;
+	background: #212121;
+	width: 13vw;
+	height: 13vw;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+	background-image: url(../images/grass.jpg);
+	background-size: cover;
+	background-repeat: repeat;
+	background-clip: content-box, border-box;
+}
+
+.f-base > .fountain > .w-base {
+	background-image: url(../images/sidewalk.jpg);
+	background-size: 1vw 1vw;
+	background-repeat: repeat;
+	width: calc(6.5vw + 8px);
+	height: calc(6.5vw + 8px);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+}
+
+.f-base > .fountain > .w-base > .water{
+	z-index: 1;
+	background-image: url(../images/water.jpg);
+	background-size: cover;
+	background-repeat: repeat;
+	width: 6.5vw;
+	height: 6.5vw;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+}
+
+.divider-x{
+	height: 0;
+	background: none;
+	border-bottom: 6px #fff dashed;
+	width: 45vw;
+}
+
+.divider-y{
+	width: 0;
+	background: none;
+	border-left: 6px #fff dashed;
+	height: 30vh;
+}
+
+.divider-y.bottom{
+	bottom: -1vh;
+}
+
+.relative-container{
+	position: relative;
+	height: inherit;
+	width: inherit;
+}
+
+.building{
+	z-index: 2;
+	position: absolute;
+    width: 15vw;
+    height: 15vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.building.normal{
+	background-image: url(../images/normal.png);
+}
+
+.building.shop{
+	width: 12vw;
+    height: 12vw;
+	background-image: url(../images/shop.png);
+}
+
+.building.deluxe{
+	width: 15vw;
+    height: 15vw;
+	background-image: url(../images/deluxe.png);
+}
+
+.building.house{
+	width: 15vw;
+    height: 15vw;
+	background-image: url(../images/house.png);
+	transform: scale(1);
+}
+
+.building.townhouse{
+	width: 23vw;
+    height: 20vw;
+	background-image: url(../images/house2.png);
+	transform: rotate3d(0,0,1,0deg) scale(1) perspective(500px)!important;
+}
+
+.building.houses{
+	background-image: url(../images/houses.jpg);
+	transform: rotate3d(0,0,1,0deg) scale(1) perspective(500px)!important;
+	top: -12vw!important;
+    width: 40vw!important;
+    background-size: cover!important;
+    height: 30vw!important;
+    transform: scaleY(-1)!important;
+    left: -5.5vw!important;
+}
+
+.building.pool{
+	width: 14vw;
+    height: 15vw;
+    background-image: url(../images/pool.png);
+    transform: rotate3d(0,0,1,31deg) scale(1) perspective(500px)!important;
+    border-radius: 50%;
+    background-size: contain;
+    left: 9vw!important;
+}
+
+.tree1{
+	width: 5vw;
+	height: 5vw;
+	background-image: url(../images/tree1.png);
+	background-size: cover!important;
+}
+
+.tree2{
+	width: 5vw;
+	height: 5vw;
+	background-image: url(../images/tree2.png);
+	background-size: cover!important;
+}
+
+.tree3{
+	width: 5vw;
+	height: 5vw;
+	background-image: url(../images/tree3.png);
+	background-size: cover!important;
+}
+
+.grass .tree1, .grass .tree2, .grass .tree3{
+	position: absolute;
+}
+
+.fountain  .tree1, .fountain  .tree2, .fountain  .tree3{
+	position: absolute;
+	width: 2vw;
+	height: 2vw;
+}
+
+
+.building.deluxe.three.top-left{
+	top: -3.5vw;
+	left: -1.8vw;
+}
+
+.building.townhouse.three {
+    left: 16vw;
+}
+
+.building.deluxe.three.top-right{
+	top: -3.5vw;
+	left: 11vw;
+}
+
+
+.building.shop.top-right.one{
+	top: -1vw;
+    left: 1vw;
+    transform: rotate3d(0,0,1,-30deg) scale(-1) perspective(500px);
+}
+
+.building.normal.top-right{
+    top: -1.75vw;
+    transform: rotate3d(1,0,1,-39deg) scale(-1) perspective(500px);
+}
+
+.building.top-right, .building.top-left{
+	top: -1.75vw;
+	transform: rotate3d(1,0,1,39deg) scale(-1) perspective(500px);
+}
+
+.building.one{
+	left: 1vw;
+}
+
+.building.two{
+	left: 9vw;
+}
+
+.building.three{
+	left: 17vw;
+}
+
+.road-x > .trafic-light.X1{
+	left: 32vw;
+}
+
+.road-x > .trafic-light.X2{
+	left: 65vw;
+	top: 10.5vw;
+	transform: rotate(180deg);
+}
+
+.road-y > .trafic-light.X1{
+	top: 10vw;
+	left: 18vw;
+	transform: rotate(90deg);
+}
+
+.road-y > .trafic-light.X2{
+	bottom: 10vw;
+	left: 4vw;
+	transform: rotate(270deg);
+}
+
+.block .trafic-base{
+	z-index: 2;
+    position: absolute;
+    width: 2.5vw;
+    height: 2.5vw;
+    background: #888888;
+    box-shadow: 3px 3px;
+    border-radius: 15%;
+}
+
+.trafic-base-connects-trafic-light{
+	z-index: 2;
+    position: absolute;
+    width: .5vw;
+    height: 7vw;
+    background: #eeeeee;
+    box-shadow: 3px 3px;
+    border-radius: 15%;
+}
+
+.trafic-light {
+  	position: absolute;
+  	z-index: 5;
+  	background-color: #2c3e50;
+  	border-radius: 10px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: space-around;
+  	padding: 1vw 0;
+  	height: 15vh;
+  	width: 6vh;
+  	box-shadow: 5px 10px;
+}
+
+.circle {
+  	background-color: rgba(0, 0, 0, 0.3);
+  	border-radius: 100%;
+  	position: relative;
+  	height: 4vh;
+  	width: 4vh;
+  	padding: 5px 0;
+}
+
+.circle::after {
+  	border-right: 4px solid rgba(255, 255, 255, 0.6);
+  	border-radius: 100%;
+  	content: ' ';
+  	position: absolute;
+  	top: .3vw;
+  	left: .4vw;
+  	width: 1.5vw;
+  	height: 1.5vw;
+}
+
+.circle.red {
+  	background-color: #c0392b;
+  	box-shadow: 0 0 20px 5px #c0392b;
+}
+
+.circle.yellow {
+  	background-color: #f1c40f;
+  	box-shadow: 0 0 20px 5px #f1c40f;
+}
+
+.circle.green {
+  	background-color: #2ecc71;
+  	box-shadow: 0 0 20px 5px #2ecc71;
+}
+
+.car1{
+	z-index: 2;
+	position: absolute;
+	width: 4.5vw;
+	height: 8.5vw;
+	background-image: url(../images/car1.png);
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.car2{
+	z-index: 2;
+	position: absolute;
+	width: 4.5vw;
+	height: 8.5vw;
+	background-image: url(../images/car2.png);
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.car3{
+	z-index: 2;
+	position: absolute;
+	width: 4.5vw;
+	height: 8.5vw;
+	background-image: url(../images/car3.png);
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.car4{
+	z-index: 2;
+	position: absolute;
+	width: 4.5vw;
+	height: 8.5vw;
+	background-image: url(../images/car4.png);
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.car5{
+	z-index: 2;
+	position: absolute;
+	width: 4.5vw;
+	height: 8.5vw;
+	background-image: url(../images/car5.png);
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.car6{
+	z-index: 2;
+	position: absolute;
+	width: 4.5vw;
+	height: 8.5vw;
+	background-image: url(../images/car6.png);
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+/* Animaciones autos 1-6 superior en dos direcciones */
+.car1.yaTop, .car2.yaTop, .car3.yaTop, .car4.yaTop, .car5.yaTop, .car6.yaTop{
+	top: -15vh;
+	transform: rotate(180deg);
+}
+
+/* Animaciones autos 1-6 inferior en dos direcciones */
+
+.car1.ybBot, .car2.ybBot, .car3.ybBot, .car4.ybBot, .car5.ybBot, .car6.ybBot{
+	bottom: -20vh;
+	right: 0;
+	transform: rotate(0deg);
+}
+
+
+/* Animaciones autos 1-6 derecho en dos direcciones */
+
+.car1.xaRight, .car2.xaRight, .car3.xaRight, .car4.xaRight, .car5.xaRight, .car6.xaRight{
+	top: -2vw;
+	right: -15vw;
+	transform: rotate(270deg);
+}
+
+/* Animaciones autos 1-6 izquierdo en dos direcciones */
+
+.car1.xbLeft, .car2.xbLeft, .car3.xbLeft, .car4.xbLeft, .car5.xbLeft, .car6.xbLeft{
+	bottom: 0;
+	left: -15vw;
+	transform: rotate(90deg);
+}
+
+table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #3498db; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	width: calc(100% / 5);
+	border: 1px solid #ccc; 
+	text-align: center; 
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+
+ul{
+	padding: 0;
+}
+
+ul > li{
+	list-style-type: none;
+	margin: 5px auto;
+}
+
+.divider{
+	width: 80%;
+	border: .5px #0d0d0d solid;
+	margin: auto;
+	display: block;
+}

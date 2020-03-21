@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simulación y Optimzación - Rubén García</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+<body id="main" onclick="toggleFullScreen()">
+	<div class="block top right">
+		<div class="relative-container">
+			<div class="trafic-base" style="top: 36vw; left: 1vw;transform: rotate(180deg);"></div>
+		</div>
+		<div class="grass top-right">
+			<div class="relative-container">
+				<div class="building houses top-right three"></div>
+			</div>
+		</div>
+	</div>
+	<div class="block top left">
+		<div class="grass top-left">
+			<div class="building normal top-right one" style="z-index: 3"></div>
+			<div class="building normal top-right three" style="left: 13vw;"></div>
+			<div class="relative-container">
+				<div class="tree2" style="top: 0vw; left: -2.5vw;"></div>
+				<div class="tree1" style="top: 7vw; left: .5vw;"></div>
+				<div class="tree3" style="top: 0vw; left: 25.5vw;"></div>
+				<div class="tree3" style="top: 7vw; left: 25.5vw;"></div>
+			</div>
+		</div>
+		<div class="relative-container">
+			<div class="trafic-base" style="top: 36vw; left: 35vw;"></div>
+		</div>
+	</div>
+	<div class="trafic-base-connects-trafic-light" style="top: 13vw;left: 33vw;"></div>
+	<div class="trafic-base-connects-trafic-light" style="top: 34vw;left: 67vw;transform: rotate(180deg);"></div>
+	<div class="road-x">
+		<div class="trafic-light X1">
+		  <div class="circle XA green" color="green"></div>
+		  <div class="circle XA" color="yellow"></div>
+		  <div class="circle XA" color="red"></div>
+		</div>
+		<div class="relative-container">
+			<div class="divider-x y-center left"></div>
+			<div class="divider-x y-center right"></div>
+		</div>
+
+		<div class="trafic-light X2">
+		  <div class="circle XB red" color="red"></div>
+		  <div class="circle XB" color="yellow"></div>
+		  <div class="circle XB" color="green"></div>
+		</div>
+	</div>
+	<div class="f-base" onclick="showCalcs()">
+		<div class="fountain">
+			<div class="relative-container">
+				<div class="tree2" style="top: .5vw;left: 5.5vw;"></div>
+				<div class="tree1" style="top: 2vw;left: 9.5vw;"></div>
+				<div class="tree2" style="top: 5vw;left: 10.5vw;"></div>
+				<div class="tree1" style="top: 8.5vw;left: 9.5vw;"></div>
+				<div class="tree1" style="top: 8.5vw;left: 1.5vw;"></div>
+				<div class="tree2" style="top: 5vw;left: .5vw;"></div>
+				<div class="tree1" style="top: 2vw;left: 2vw;"></div>
+				<div class="tree2" style="top: 10.5vw;left: 5.5vw;"></div>
+			</div>
+			<div class="w-base">
+				<div class="water"></div>
+			</div>
+		</div>
+	</div>
+	<div class="trafic-base-connects-trafic-light" style="bottom: 9.5vw;left: 37vw;transform: rotate(270deg);"></div>
+	<div class="trafic-base-connects-trafic-light" style="top: 9.5vw;left: 62.5vw;transform: rotate(90deg);"></div>
+	<div class="road-y">
+		<div class="trafic-light X1">
+		  <div class="circle YA green" color="green"></div>
+		  <div class="circle YA" color="yellow"></div>
+		  <div class="circle YA" color="red"></div>
+		</div>
+		<div class="relative-container">
+			<div class="divider-y x-center"></div>
+			<div class="divider-y x-center bottom"></div>
+		</div>
+		<div class="trafic-light X2">
+		  <div class="circle YB red" color="red"></div>
+		  <div class="circle YB" color="yellow"></div>
+		  <div class="circle YB" color="green"></div>
+		</div>
+	</div>
+	<div class="block bottom right">
+		<div class="relative-container">
+			<div class="trafic-base" style="top: 1vw; left: 2vw;transform: rotate(180deg);"></div>
+		</div>
+		<div class="grass bottom-right">
+			<div class="building pool top-right two" style="top:3vw;"></div>
+			<div class="building townhouse top-right three" style="top:-6vw;"></div>
+			<div class="relative-container">
+				<div class="tree2" style="top: 1vw; left: 14.5vw;"></div>
+				<div class="tree2" style="top: 1vw; left: 6.5vw;"></div>
+				<div class="tree2" style="top: 10vw; left: 6.5vw;"></div>
+				<div class="tree2" style="top: 10vw; left: 30.5vw;"></div>
+				<div class="tree2" style="top: 10vw; left: 22.5vw;"></div>
+			</div>
+		</div>
+	</div>
+	<div class="block bottom left">
+		<div class="relative-container">
+			<div class="trafic-base" style="top: 2vw; left: 36vw;transform: rotate(180deg);"></div>
+		</div>
+		<div class="grass bottom-left">
+			<div class="building normal top-right two" style="transform: scale(1);"></div>
+			<div class="building house top-right three" style="transform: scale(1);left:22vw;top:-4vw"></div>
+			<div class="relative-container">
+				<div class="tree3" style="top: 1vw; left: 6.5vw;"></div>
+				<div class="tree2" style="top: 10vw; left: 6.5vw;"></div>
+				<div class="tree3" style="top: 10vw; left: 30.5vw;"></div>
+				<div class="tree1" style="top: 10vw; left: 22.5vw;"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/lib/jQuery.js"></script>
+	<script type="text/javascript" src="assets/lib/SweetAlert2.js"></script>
+	<script type="text/javascript" src="assets/js/scripts.js"></script>
+</body>
+</html>
